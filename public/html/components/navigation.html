@@ -1,6 +1,8 @@
-{{ block "nav" . }}
-<div hx-boost="true" id="nav">
-    <a href="/">Home</a>
-    <a href="/saved">Saved</a>
+{{ define "nav" }}
+<div class="navbar navbar-expand-lg bg-body-tertiary">
+    <div id="nav" class="container-fluid">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/saved" class="nav-link">Saved</a>
+    </div>
 </div>
 {{ end }}
