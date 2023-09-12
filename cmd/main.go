@@ -7,12 +7,14 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	"github.com/guilhermefill/go-htmx/pkg/routes"
 )
 
 func main() {
 	fmt.Println("Starting server on port 4200...")
 
 	r := mux.NewRouter()
+	routes.RegisterRoutes(r)
 	http.Handle("/", r)
 
 	srv := &http.Server{
