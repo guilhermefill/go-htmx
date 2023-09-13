@@ -7,4 +7,5 @@ import (
 
 var RegisterRoutes = func(router *mux.Router) {
 	router.HandleFunc("/", pages.Home).Methods("GET")
+	router.HandleFunc("/about", pages.About).Methods("GET")
 }

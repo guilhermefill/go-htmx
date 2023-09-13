@@ -14,3 +14,13 @@ func Home(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.Execute(w, nil)
 }
+
+func About(w http.ResponseWriter, r *http.Request) {
+	tmpl, err := template.ParseFiles("public/html/base.html", "public/html/components/navigation.html", "public/html/pages/about.html")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	tmpl.Execute(w, nil)
+}
