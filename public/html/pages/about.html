@@ -1,6 +1,9 @@
 {{define "title"}}{{ .Title }}{{end}}
 {{ define "main"}}
     <h1 class="fs-1">
-        {{ .Content}}
+        {{ .Content.Name}}
     </h1>
+    <p>
+        {{ .Content.Description}}
+    </p>
  {{ end}}

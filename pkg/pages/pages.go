@@ -18,8 +18,11 @@ func Home(w http.ResponseWriter, r *http.Request) {
 func About(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("public/html/base.html", "public/html/components/navigation.html", "public/html/pages/about.html")
 	data := map[string]interface{}{
-		"Title":   "About",
-		"Content": "This is the about page",
+		"Title": "About",
+		"Content": map[string]interface{}{
+			"Name":        "About",
+			"Description": "This is the about page",
+		},
 	}
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
