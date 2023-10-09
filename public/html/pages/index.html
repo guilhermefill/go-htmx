@@ -1,3 +1,14 @@
 {{define "title"}}Home{{end}} {{ define "main"}}
 <h1 class="fs-1">Spooky Times</h1>
+<div>
+  <button
+    type="button"
+    class="btn btn-outline-secondary"
+    hx-get="/api/spooky"
+    hx-target="#say-boo"
+  >
+    👻
+  </button>
+  <div id="say-boo"></div>
+</div>
 {{ end}}
