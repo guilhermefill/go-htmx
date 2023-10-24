@@ -11,5 +11,8 @@ func Spooky(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	tmpl.Execute(w, nil)
+	data := map[string]interface{}{
+		"Title": "Spooky",
+	}
+	tmpl.Execute(w, data)
 }
