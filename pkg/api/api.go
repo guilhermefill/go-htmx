@@ -12,7 +12,8 @@ func Spooky(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	data := map[string]interface{}{
-		"Title": "Spooky",
+		"Title":   "Spooky",
+		"Content": "Spooky Times",
 	}
 	tmpl.Execute(w, data)
 }
